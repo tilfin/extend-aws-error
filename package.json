@@ -1,0 +1,18 @@
+{
+  "name": "extend-aws-error",
+  "version": "0.5.0",
+  "description": "Extend AWS SDK request error with the request information",
+  "main": "extend_aws_error.js",
+  "scripts": {
+    "test": "mocha --timeout 5000 test/default.js; mocha --timeout 5000 test/no_run_stack.js; mocha --timeout 5000 test/run_stack_lines.js; mocha --timeout 5000 test/params_inspect_options.js"
+  },
+  "author": "Toshimitsu Takahashi",
+  "license": "MIT",
+  "devDependencies": {
+    "aws-sdk": "^2.112.0",
+    "chai": "^4.1.2",
+    "decache": "^4.1.0",
+    "mocha": "^3.5.0",
+    "rewire": "^2.5.2"
+  }
+}
