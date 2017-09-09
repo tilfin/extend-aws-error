@@ -4,7 +4,7 @@
   "description": "Extend AWS SDK request error with the request information",
   "main": "extend_aws_error.js",
   "scripts": {
-    "test": "mocha --timeout 5000 test/default.js; mocha --timeout 5000 test/no_run_stack.js; mocha --timeout 5000 test/run_stack_lines.js; mocha --timeout 5000 test/params_inspect_options.js"
+    "test": "mocha --timeout 15000 test/default.js; mocha --timeout 15000 test/no_run_stack.js; mocha --timeout 15000 test/run_stack_lines.js; mocha --timeout 15000 test/params_inspect_options.js"
   },
   "author": "Toshimitsu Takahashi",
   "license": "MIT",
