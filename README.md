@@ -1,6 +1,8 @@
 # Extend AWS Error
 
+[![NPM Version][npm-image]][npm-url]
 [![Build Status](https://travis-ci.org/tilfin/extend-aws-error.svg)](https://travis-ci.org/tilfin/extend-aws-error)
+[![dependencies Status](https://david-dm.org/tilfin/extend-aws-error/status.svg)](https://david-dm.org/tilfin/extend-aws-error)
 
 [AWS SDK for JavaScript](https://github.com/aws/aws-sdk-js) throws an error without the request information,
 therefore we are too difficutl to investigate where the problem occurred at debug.
@@ -104,3 +106,11 @@ ResourceNotFoundException: Requested resource not found
     at Request.<anonymous> (/home/tilfin/extend-aws-error/node_modules/aws-sdk/lib/request.js:685:12)
     at Request.callListeners (/home/tilfin/extend-aws-error/node_modules/aws-sdk/lib/sequential_executor.js:115:18)
 ```
+
+
+## License
+
+[MIT](LICENSE)
+
+[npm-image]: https://img.shields.io/npm/v/extend-aws-error.svg
+[npm-url]: https://npmjs.org/package/extend-aws-error
