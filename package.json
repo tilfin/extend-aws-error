@@ -8,11 +8,16 @@
   },
   "author": "Toshimitsu Takahashi",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tilfin/extend-aws-error.git"
+  },
+  "keywords": [
+    "AWS"
+  ],
   "devDependencies": {
     "aws-sdk": "^2.112.0",
     "chai": "^4.1.2",
-    "decache": "^4.1.0",
-    "mocha": "^3.5.0",
-    "rewire": "^2.5.2"
+    "mocha": "^3.5.0"
   }
 }
