@@ -15,6 +15,8 @@ $ npm install extend-aws-error
 
 ## How to use
 
+`const extendAWSError = require('extend-aws-error');`
+
 **extendAWSError(** _options_ **)**
 
 * `options` `<Object>`
