@@ -7,7 +7,6 @@
 [AWS SDK for JavaScript](https://github.com/aws/aws-sdk-js) throws an error without the request information,
 therefore we are too difficutl to investigate where the problem occurred at debug.
 This npm module extends an AWS Request error with the method name, the place where it ran and so on.
-It supports only requests with callback and promise requests, does not support the process using readable stream.
 
 ## Install
 
