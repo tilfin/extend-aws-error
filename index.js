@@ -81,6 +81,33 @@ function extendError(AWS, opts) {
       });
   }
 
+  /*
+   * Extend a createReadStream method
+   */
+  const origCreateReadStream = AWS.Request.prototype.createReadStream;
+
+  AWS.Request.prototype.createReadStream = function createReadStreamEx() {
+    const req = this;
+    let runStack = null;
+    if (needRunAt) runStack = getRunStack(arguments.callee);
+
+    const stream = origCreateReadStream.call(this);
+    const origOn = stream.on;
+    stream.on = function (name, callback) {
+      if (name === 'error') {
+        origOn.call(this, name, function(err) {
+          if (err instanceof Error) {
+            injectRequestInfo(err, req, runStack);
+          }
+          callback(err);
+        })
+      } else {
+        origOn.call(this, name, callback)
+      }
+    }
+
+    return stream
+  }
   return AWS;
 }
 

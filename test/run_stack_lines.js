@@ -34,5 +34,13 @@ describe('extendAWSError', () => {
       .catch(sharedAssert)
       .then(done).catch(done);
     });
+
+    it('extends AWS Error with 1 line runStack createReadStream throws', (done) => {
+      const stream = s3.getObject(params).createReadStream();
+      stream.on('error', err => {
+        sharedAssert(err);
+        done();
+      });
+    });
   });
 });
