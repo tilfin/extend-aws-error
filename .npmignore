@@ -1,0 +1,6 @@
+.travis.yml
+.vscode/
+.nyc_output/
+test/
+example/
+coverage/
