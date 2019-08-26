@@ -1,6 +1,6 @@
 {
   "name": "extend-aws-error",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "description": "Extend AWS SDK request error with the request information",
   "main": "extend_aws_error.js",
   "scripts": {
