@@ -48,6 +48,10 @@ function extendError(AWS, opts) {
   const origSend = AWS.Request.prototype.send;
 
   AWS.Request.prototype.send = function sendEx(callback) {
+    if (!callback) {
+      return origSend.call(this)
+    }
+
     const req = this;
     let runStack = null;
     if (needRunAt) runStack = getRunStack(arguments.callee).slice(2);
